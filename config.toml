@@ -1,6 +1,6 @@
-baseURL = "https://mangaplus.netlify.app/"
+baseURL = "https://mangaku.netlify.app/"
 languageCode = "en-us"
-title = "Manga Plus"
+title = "Manga ku"
 theme = "x"
 sectionPagesMenu = "main"
 
@@ -14,7 +14,7 @@ sectionPagesMenu = "main"
 [params]
   description = "Find Your Favorite Manga Series Here"
   topdescription = "Find Your Favorite Manga Series Here"
-  toptitle = "Manga Plus"
+  toptitle = "Manga ku"
   contentBackgroundColor = "#fff"
   contentLinkColor = "#007bff"
   contentLinkHoverColor = "#0056b3"
@@ -66,7 +66,7 @@ sectionPagesMenu = "main"
 
 [author]
     name = "manga fans"
-    homepage = "https://mangaplus.netlify.app/"
+    homepage = "https://mangaku.netlify.app/"
     bio = "True Manga Lover"
     image = "https://i.imgur.com/qNQv8nK.jpg"
 
