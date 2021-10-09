@@ -1,0 +1,31 @@
+name: Build Dengan Cron
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: Build dan Deploy
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.88.0"
+
+      - name: Jalankan Hugo
+        run: hugo
+
+      - name: 'Deploy ke Netlify'
+        uses: jsmrcaga/action-netlify-deploy@v1.2.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ????
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: 'public'
+
+

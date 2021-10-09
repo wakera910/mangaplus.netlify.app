@@ -1,0 +1,32 @@
+<hr/>
+<div class="row my-3 mx-0">
+{{with .PrevInSection}}
+    <div class="col-sm-12 col-lg-4 text-center">
+        <div class="card bg-dark text-white border border-light mb-0">
+            <a href="{{ .Permalink }}"><img class="card-img" src="{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}" alt="{{ .Title | markdownify }}"></a>
+            <div class="card-img-overlay px-3 d-flex align-items-center justify-content-center ovl">
+            <a class="card-title text-white font-weight-bold" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </div>
+        </div>
+        <div class="mt-0 mb-3">
+            <span class="btn btn-primary btn-sm btn-block"><a class="text-white" href="{{ .Permalink }}">&#11164; Previous</a></span>
+        </div>
+    </div>
+{{end}}
+    <div class="col-sm-12 col-lg-4">
+        <!-- spacer -->
+    </div>
+{{with .NextInSection}}
+    <div class="col-sm-12 col-lg-4 text-center">
+        <div class="card bg-dark text-white border border-light mb-0">
+            <a href="{{ .Permalink }}"><img class="card-img" src="{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}" alt="{{ .Title | markdownify }}"></a>
+            <div class="card-img-overlay px-3 d-flex align-items-center justify-content-center ovl">
+            <a class="card-title text-white font-weight-bold" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            </div>
+        </div>
+        <div class="mt-0 mb-3">
+            <span class="btn btn-primary btn-sm btn-block"><a class="text-white" href="{{ .Permalink }}">Next &#11166;</a></span>
+        </div>
+    </div>
+{{end}}
+</div>

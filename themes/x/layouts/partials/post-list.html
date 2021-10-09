@@ -1,0 +1,25 @@
+<article class="card-post">
+  <div class="container">
+      <div class="row">
+          {{ range (.Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) 9).Pages }}         
+              <div class="col-md-4 mb-4 d-flex">
+                  <div class="card">
+                      <a href="{{ .Permalink }}">
+                      <img class='card-img-top mt-0 mb-0' 
+                          src='{{ if eq .Params.Image "" }}https://placeholder.pics/svg/320x160{{else}}{{ .Params.Image}}{{end}}'
+                          alt='{{ .Title | markdownify }}'>
+                      </a>
+                      <div class="card-body">
+                          <h6 class="card-title mt-0 mb-0">
+                              <a class="text-dark" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+          {{- end -}}
+  </div>
+  </div>
+</article>
+<div class="container d-flex align-items-center justify-content-center" style="font-size:85%">
+  {{ partial "pagination.html" . }}
+</div>

@@ -1,0 +1,6 @@
+{{ range .Params.tags }}
+{{ $href := print (absURL "tags/") (urlize .) }}
+<span class="badge badge-success">
+   #<a class="text-white" href="{{ $href }}">{{ . }}</a>
+</span> 
+{{ end }}

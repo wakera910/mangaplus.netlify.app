@@ -1,0 +1,102 @@
+baseURL = "https://mangaplus.netlify.app/"
+languageCode = "en-us"
+title = "Manga Plus"
+theme = "x"
+sectionPagesMenu = "main"
+
+[taxonomies]
+  tag = ""
+  category = ""
+
+[permalinks]
+  post = ":slug"
+
+[params]
+  description = "Find Your Favorite Manga Series Here"
+  topdescription = "Find Your Favorite Manga Series Here"
+  toptitle = "Manga Plus"
+  contentBackgroundColor = "#fff"
+  contentLinkColor = "#007bff"
+  contentLinkHoverColor = "#0056b3"
+  contentTextColor = "#212529"
+  cookieConsent = false
+  customBlockquoteStyle = true
+  customCodeStyle = true
+  customDateFormat = "Jan 2, 2006"
+  faviconMsApplicationTileColor = "#da532c"
+  faviconSafariPinnedTabColor = "#5bbad5"
+  faviconThemeColor = "#ffffff"
+  googleAnalytics = ""
+  includeBootstrapJs = true
+  navbarBackgroundColor = "#212529"
+  navbarLinkColor = "rgba(255, 255, 255, 0.75)"
+  navbarLinkHoverColor = "rgba(255, 255, 255, 1)"
+  showPostSummary = false
+  wrapperMaxWidth = ""
+  mainSections = ["posts"]
+  [params.social.share]
+    facebook = true
+    linkedin = true
+    twitter = true
+    whatsapp = true
+    email = true
+
+
+[menu]
+  [[menu.nav]]
+  name = "Home"
+  url = "/"
+  weight = 1
+  [[menu.nav]]
+  name = "Contact"
+  url = "/pages/contact"
+  weight = 2
+  [[menu.nav]]
+  name = "Copyright"
+  url = "/pages/copyright"
+  weight = 3
+  [[menu.nav]]
+  name = "DMCA"
+  url = "/pages/dmca"
+  weight = 4
+  [[menu.nav]]
+  name = "Privacy Policy"
+  url = "/pages/privacy-policy"
+  weight = 5
+
+[author]
+    name = "manga fans"
+    homepage = "https://mangaplus.netlify.app/"
+    bio = "True Manga Lover"
+    image = "https://i.imgur.com/qNQv8nK.jpg"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 6
+    startLevel = 2
